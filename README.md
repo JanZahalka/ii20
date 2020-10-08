@@ -18,3 +18,8 @@ If you are using II-20 or its parts in your scientific work, please cite the II-
 II-20 is implemented as a Django web app utilizing scientific and deep learning Python libraries in the backend, with the front end being realized through React.js. The software was tested on Ubuntu and Mac OS. I am not aware of any specific reasons it shouldn't run on Windows, but I have not tested that. In this section, we describe how to get started with analytics on demo data.
 
 1. Clone this repository. In further text, `$II20_ROOT` denotes the root directory of the repository. `cd` to it.
+2. Download the demo dataset from here: **LINK!**. Store it wherever convenient for you, unzip, note the absolute path to the dataset (the `yfcc10k` directory), further denoted as `$YFCC10K_ROOT`.
+3. Install the prerequisites: `sudo apt-get install virtualenv mysql-server libmysqlclient-dev` (on Ubuntu, if using a different distro or Mac OS, install the equivalents).
+4. Create the virtual environment: `virtualenv -p python3 env_ii20`.
+5. Activate the virtual environment: `source env_ii20/bin/activate`.
+6. Install the required Python packages: `pip install -r requirements.txt`.

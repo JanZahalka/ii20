@@ -18,7 +18,7 @@ If you are using II-20 or its parts in your scientific work, please cite the II-
 II-20 is implemented as a Django web app utilizing scientific and deep learning Python libraries in the backend, with the front end being realized through React.js. The software was tested on Ubuntu and Mac OS. I am not aware of any specific reasons it shouldn't run on Windows, but I have not tested that. In this section, we describe how to get started with analytics on demo data.
 
 1. Clone this repository. In further text, `$II20_ROOT` denotes the root directory of the repository. `cd` to it.
-2. Download the demo dataset from here: **LINK!**. Store it wherever convenient for you, unzip, note the absolute path to the dataset (the `yfcc10k` directory), further denoted as `$YFCC10K_ROOT`.
+2. Download the demo dataset from here: **LINK!**. Store it wherever convenient for you, unzip, note the absolute path to the dataset (the `yfcc10k` directory). Open the `$II20_ROOT/ii20/data/datasets/yfcc10k.json` file in a text editor, change the `root_dir` entry to the absolute path to the dataset, save and close the JSON file.
 3. Install the prerequisites: `sudo apt-get install virtualenv mysql-server libmysqlclient-dev` (on Ubuntu, if using a different distro or Mac OS, install the equivalents).
 4. Create the virtual environment: `virtualenv -p python3 env_ii20`.
 5. Activate the virtual environment: `source env_ii20/bin/activate`.
@@ -37,8 +37,19 @@ exit
 11. `cd ../ii20`
 12. `python manage.py migrate`
 13. Create the Django superuser: `python manage.py createsuperuser`, note the username (further: `<django_admin_username>`) and password (further: `<django_admin_password>`).
-14. Link the demo dataset: open the `$II20_ROOT/ii20/data/datasets/yfcc10k.json` file and change the `root_dir` entry to `"$YFCC10K_ROOT"`.
-15. (Optional, but recommended) Set a user account other than the Django superuser to log in to II-20 (if skipped, you can log in with the Django superuser credentials). First, `cd $II20_ROOT/ii20`. Then, run the server: `python manage.py runserver`. Open up your browser, go to `localhost:8000/admin`, log in to the admin interface with the Django superuser credentials and create the new user account there.
+14. (Optional, but recommended) Set a user account other than the Django superuser to log in to II-20 (if skipped, you can log in with the Django superuser credentials). First, `cd $II20_ROOT/ii20`. Then, run the server: `python manage.py runserver`. Open up your web browser, go to `localhost:8000/admin`, log in to the admin interface with the Django superuser credentials and create the new user account there.
 
 ## Running II-20
-After installing the 
+After installing II-20, you run the server using those commands:
+```
+cd $II20_ROOT/ii20
+python manage.py runserver
+```
+
+Then you open your web browser, go to `localhost:8000`, log in to the system, select your dataset, and then you can start your analytic session.
+
+## Using your own data
+In this section, we describe how you can use II-20 on your own image dataset. Let `$DATASET_ROOT$` denote the root directory of your dataset.
+
+1. Download the ImageNetShuffle 13k deep net from here: isis-data.science.uva.nl/koelma/pthmodels/resnet101_rbps13k_scratch_b256_lr0.1_nep75_gpus1x4/model_best.pth. Store it in `$II20_ROOT/ii20/data/mlmodels` (create the directory if it doesn't exist).
+2. Create the dataset JSON config file for your dataset.

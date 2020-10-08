@@ -52,7 +52,7 @@ Then you open your web browser, go to `localhost:8000`, log in to the system, se
 In this section, we describe how you can use II-20 on your own image dataset. Let `$DATASET_ROOT$` denote the root directory of your dataset.
 
 1. Download the ImageNetShuffle 13k deep net from here: http://isis-data.science.uva.nl/koelma/pthmodels/resnet101_rbps13k_scratch_b256_lr0.1_nep75_gpus1x4/model_best.pth. Store it in `$II20_ROOT/ii20/data/mlmodels` (create the directory if it doesn't exist).
-2. Create the dataset JSON config file for your dataset:
+2. Create the dataset JSON config file for your dataset (this is the basic version, for all accepted configs, refer to the Dataset config section below):
 ```
 {
 	"root_dir": "<absolute_path_to_your_dataset>",
@@ -61,3 +61,6 @@ In this section, we describe how you can use II-20 on your own image dataset. Le
 ```
 3. Store the JSON config file at `$II20_ROOT/ii20/data/datasets/<dataset_name>.json`. The `<dataset_name>` is the name used for your dataset on the dataset selection screen.
 4. `cd $II20_ROOT/ii20`
+5. Process the dataset: `python manage.py processdataset <dataset_name>`. The dataprocessing script will first check your dataset config. Then, it will find all images in `$DATASET_ROOT` and its subdirectories. Non-image files will be ignored, and note that every image is treated as unique and unrelated to others; if you have various versions of the same images in subdirectories of `$DATASET_ROOT`, consider cleaning up before you start dataprocessing. Then, features are extracted from the images and compressed into an efficient interactive learning representation. Finally, the collection index is constructed.
+6. Open `$II20_ROOT/ii20/data/datasets/<dataset_name>.json` again, and set it to `true`.
+7. Your dataset should now be selectable in II-20 and you should be able to perform analytics on it.

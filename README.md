@@ -77,3 +77,7 @@ The basic version of the dataset config should do the trick, but if you need to 
 * `index_features_path` (optional) --- The path (relative to `root_dir`) where the abstract features used to construct II-20's collection index are stored. Default: `"ii20model/index_features.h5"`.
 * `index_dir_path` (optional) --- The path (relative to `root_dir`) to the directory where the index data structures are stored. Default: `"ii20model/index"`.
 * `index_n_submat` (optional) --- The number of product-quantization submatrices (column-wise splits) and thus subquantizers to be used. This needs to be a positive integer and the number of features (columns) in the feature matrix @ `index_features_path` must be divisible by this number. Default: 32. The number of abstract features extracted by ImageNetShuffle 13k is 2048, so powers of 2 work here.
+
+## SW architecture & documentation
+II-20 uses a fairly standard Django project structure. There are three Django apps in II-20:
+* `ui` --- The frontend, which is chiefly in React.js (files in `$II20_ROOT/ii20/ui/src/components`, the entry class is `II20Main.js`). Hooked to Django through the template 

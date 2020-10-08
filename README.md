@@ -15,4 +15,6 @@ If you are using II-20 or its parts in your scientific work, please cite the II-
 (https://arxiv.org/abs/2005.02149)
 
 ## Installation
-II-20 is implemented as a Django web app utilizing scientific and deep learning Python libraries in the backend, with the front end being realized through React.js. I have tested 
+II-20 is implemented as a Django web app utilizing scientific and deep learning Python libraries in the backend, with the front end being realized through React.js. The software was tested on Ubuntu and Mac OS. I am not aware of any specific reasons it shouldn't run on Windows, but I have not tested that. In this section, we describe how to get started with analytics on demo data.
+
+1. Clone this repository. In further text, `$II20_ROOT` denotes the root directory of the repository. `cd` to it.

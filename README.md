@@ -14,6 +14,9 @@ If you are using II-20 or its parts in your scientific work, please cite the II-
 
 (https://arxiv.org/abs/2005.02149)
 
+## License
+II-20 is licensed under the terms of the MIT License (see LICENSE.txt).
+
 ## Installation
 II-20 is implemented as a Django web app utilizing scientific and deep learning Python libraries in the backend, with the front end being realized through React.js. The software was tested on Ubuntu and Mac OS. I am not aware of any specific reasons it shouldn't run on Windows, but I have not tested that. In this section, we describe how to get started with analytics on demo data (a random 10K subset of YFCC100M).
 

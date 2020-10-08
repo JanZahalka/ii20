@@ -80,4 +80,8 @@ The basic version of the dataset config should do the trick, but if you need to 
 
 ## SW architecture & documentation
 II-20 uses a fairly standard Django project structure. There are three Django apps in II-20:
-* `ui` --- The frontend, which is chiefly in React.js (files in `$II20_ROOT/ii20/ui/src/components`, the entry class is `II20Main.js`). Hooked to Django through the template 
+* `ui` --- The frontend, which is chiefly in React.js (files in `$II20_ROOT/ii20/ui/src/components`, the entry class is `II20Main.js`). Hooked to Django through the `ui/templates/ui/analytics.html` template (essentially provides a container for the UI, and specifies `main.js`, a Javascript compiled from the React.js components, as the entry point).
+* `aimodel` --- The "live" backend during the analytics sessions. This is, essentially, where the II-20 model resides. The entry class is `AnalyticSession`, which in turn is a UI-backend middleman wrapper relying on `AIModel`, which provides the actual intelligent functionality. The most notable class invoked by `AIModel` is `Bucket`, which encapsulates all of the intelligence of each bucket, i.e., analytic category.
+* `data` --- Responsible for both the dataprocessing (converting raw data to II-20 data structures) and for handling the data within the analytic session proper.
+
+The code is documented by inline comments, NumPy style docstrings, and my best attempt at good coding style (PEP 8 adherence, making sure the variable/method names are meaningful...).

@@ -51,5 +51,13 @@ Then you open your web browser, go to `localhost:8000`, log in to the system, se
 ## Using your own data
 In this section, we describe how you can use II-20 on your own image dataset. Let `$DATASET_ROOT$` denote the root directory of your dataset.
 
-1. Download the ImageNetShuffle 13k deep net from here: isis-data.science.uva.nl/koelma/pthmodels/resnet101_rbps13k_scratch_b256_lr0.1_nep75_gpus1x4/model_best.pth. Store it in `$II20_ROOT/ii20/data/mlmodels` (create the directory if it doesn't exist).
-2. Create the dataset JSON config file for your dataset.
+1. Download the ImageNetShuffle 13k deep net from here: http://isis-data.science.uva.nl/koelma/pthmodels/resnet101_rbps13k_scratch_b256_lr0.1_nep75_gpus1x4/model_best.pth. Store it in `$II20_ROOT/ii20/data/mlmodels` (create the directory if it doesn't exist).
+2. Create the dataset JSON config file for your dataset:
+```
+{
+	"root_dir": "<absolute_path_to_your_dataset>",
+	"load": false
+}
+```
+3. Store the JSON config file at `$II20_ROOT/ii20/data/datasets/<dataset_name>.json`. The `<dataset_name>` is the name used for your dataset on the dataset selection screen.
+4. `cd $II20_ROOT/ii20`

@@ -15,10 +15,10 @@ If you are using II-20 or its parts in your scientific work, please cite the II-
 (https://arxiv.org/abs/2005.02149)
 
 ## Installation
-II-20 is implemented as a Django web app utilizing scientific and deep learning Python libraries in the backend, with the front end being realized through React.js. The software was tested on Ubuntu and Mac OS. I am not aware of any specific reasons it shouldn't run on Windows, but I have not tested that. In this section, we describe how to get started with analytics on demo data.
+II-20 is implemented as a Django web app utilizing scientific and deep learning Python libraries in the backend, with the front end being realized through React.js. The software was tested on Ubuntu and Mac OS. I am not aware of any specific reasons it shouldn't run on Windows, but I have not tested that. In this section, we describe how to get started with analytics on demo data (a random 10K subset of YFCC100M).
 
 1. Clone this repository. In further text, `$II20_ROOT` denotes the root directory of the repository. `cd` to it.
-2. Download the demo dataset from here: **LINK!**. Store it wherever convenient for you, unzip, note the absolute path to the dataset (the `yfcc10k` directory). Open the `$II20_ROOT/ii20/data/datasets/yfcc10k.json` file in a text editor, change the `root_dir` entry to the absolute path to the dataset, save and close the JSON file.
+2. Download the demo dataset from here: https://drive.google.com/file/d/1BpHbdhBXpn6Dqd-5mqbWcb4Alv31q30c/view?usp=sharing. Store it wherever convenient for you, unzip, note the absolute path to the dataset (the `yfcc10k` directory). Open the `$II20_ROOT/ii20/data/datasets/yfcc10k.json` file in a text editor, change the `root_dir` entry to the absolute path to the dataset, save and close the JSON file.
 3. Install the prerequisites: `sudo apt-get install virtualenv mysql-server libmysqlclient-dev` (on Ubuntu, if using a different distro or Mac OS, install the equivalents).
 4. Create the virtual environment: `virtualenv -p python3 env_ii20`.
 5. Activate the virtual environment: `source env_ii20/bin/activate`.
@@ -68,3 +68,5 @@ In this section, we describe how you can use II-20 on your own image dataset. Le
 ## Dataset config
 The basic version of the dataset config should do the trick, but if you need to change locations where the feature files are going to be stored or other parameters, here's a full reference to the accepted config values:
 * `root_dir` (required) --- The absolute path to the root directory of your dataset.
+* `load` (required) --- A boolean flag (`true` or `false`) denoting whether the dataset should be loaded into II-20 on system startup. This should always be `false` before the dataset was processed successfully (otherwise II-20 will crash on start-up due to missing feature/index files). Post processing, this can be used to switch datasets on and off (toggling between making analytics available on the dataset and saving memory and resources).
+* `image_ordering` (optional) --- The path to the list of images (paths relative to `root_dir`) in the dataset that consitutes the "canonical ordering" (the images in the feature representations and the index are in the same order). The list itself is constructed automatically during dataprocessing. Default: `"image_ordering.json"`.

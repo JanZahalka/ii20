@@ -216,15 +216,6 @@ class DiscardPile:
         """
         Commits the discard pile fast-forward.
         """
-
-        # Wouldn't hurt if this went through even with empty outstanding_ff,
-        # but for the sake of state consistency, raise an error if this is
-        # called when there are no outstanding fast-forwards.
-        if len(self.outstanding_ff) == 0:
-            err = ("Fast-forward commit to bucket called, but there are no "
-                   "outstanding fast forwards!")
-            raise ValueError(err)
-
         self.pile += self.outstanding_ff
         self.seen_images.update(self.outstanding_ff)
         self.outstanding_ff = []

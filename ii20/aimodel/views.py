@@ -83,7 +83,7 @@ def analytics_session(request):
 
     bucket_info = request.session["analytics"].bucket_info()
 
-    template = loader.get_template("ui/tetris.html")
+    template = loader.get_template("ui/analytics.html")
 
     context = dict()
     context["init_buckets"] = json.dumps(bucket_info["buckets"])
@@ -429,6 +429,8 @@ def ff_commit(request):
         return session_check
 
     request_data = json.loads(request.body)
+
+    print(request_data)
 
     try:
         bucket = request_data["bucket"]

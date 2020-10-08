@@ -11,8 +11,7 @@ class SidePanel extends React.Component {
 		super(props);
 
 		this.state = {
-			ffVisible: false,
-			recordInsightVisible: false
+			ffVisible: false
 		}
 	}
 
@@ -26,55 +25,6 @@ class SidePanel extends React.Component {
 		this.setState({
 			ffVisible: false
 		})
-	}
-
-	recordInsightOpen = () => {
-		this.setState({
-			recordInsightVisible: true
-		})
-
-		this.props.setSuppressTetrisControls(true);
-	}
-
-	recordInsightClose = () => {
-		this.setState({
-			recordInsightVisible: false
-		})
-
-		this.props.setSuppressTetrisControls(false);
-	}
-
-	submitInsight = () => {
-		let requestParams = {
-			method: "POST",
-			headers: {
-				"Accept": "application/json",
-            	"Content-Type": "application/json",
-				"X-CSRFToken": csrfToken
-			},
-			body: JSON.stringify({
-				insight: document.getElementById("insight").value
-			})
-		};
-
-		fetch("/record_insight", requestParams)
-			.then(this.recordInsightClose);
-	}
-
-	endSession = () => {
-		let userConfirmed = confirm("Are you sure you want to end the session?")
-
-		if (!userConfirmed) {
-			return;
-		}
-
-		fetch("/end_session")
-			.then(this.props.checkResponseError)
-			.then(response => response.json())
-			.then(responseData => {
-				window.location.href = responseData["redirect_url"]
-			})
-			.catch(error => alert(error));
 	}
 
 

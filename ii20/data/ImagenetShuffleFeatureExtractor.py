@@ -52,7 +52,9 @@ class ImagenetShuffleFeatureExtractor:
         # Load the model from the .pth file
         while not model:
             try:
-                model = torch.load(model_path)
+                # By default, we use the CPU mode
+                model = torch.load(model_path,
+                                   map_location=torch.device('cpu'))
             except Exception:
                 model_path = input(type(self).MODEL_PATH_PROMPT)
 

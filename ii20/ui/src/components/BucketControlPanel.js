@@ -222,9 +222,21 @@ class BucketControlPanel extends React.Component {
 			.catch(error => alert(error));
 	}
 
+	closeBucketView = (bucketId) => {
+		/*
+			Closes the bucket view (deciding whether to commit a fast-forward or not).
+		*/
+		if (this.state.fastForwardLoaded) {
+			this.commitFastForwardAndClose(bucketId);
+		}
+		else {
+			this.props.setVisibleBucketView(-1);
+		}
+	}
+
 	commitFastForwardAndClose = (bucketId) => {
 		/*
-			Commits the fast-forward and closes the bucket view.
+			Commits fast-forward and closes the bucket view.
 		*/
 		let requestParams = {
 			method: "POST",
@@ -297,6 +309,7 @@ class BucketControlPanel extends React.Component {
 								            refreshBucketViewData={this.refreshBucketViewData}
 								            transferImages={this.transferImages}
 								            setPostTransferReloadFlag={this.props.setPostTransferReloadFlag}
+								            close={() => {this.closeBucketView(b)}}
 
 								            buckets={this.props.buckets}
 								            bucketOrdering={this.props.bucketOrdering}

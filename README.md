@@ -37,4 +37,8 @@ exit
 11. `cd ../ii20`
 12. `python manage.py migrate`
 13. Create the Django superuser: `python manage.py createsuperuser`, note the username (further: `<django_admin_username>`) and password (further: `<django_admin_password>`).
-14. Link the demo dataset: open 
+14. Link the demo dataset: open the `$II20_ROOT/ii20/data/datasets/yfcc10k.json` file and change the `root_dir` entry to `"$YFCC10K_ROOT"`.
+15. (Optional, but recommended) Set a user account other than the Django superuser to log in to II-20 (if skipped, you can log in with the Django superuser credentials). First, `cd $II20_ROOT/ii20`. Then, run the server: `python manage.py runserver`. Open up your browser, go to `localhost:8000/admin`, log in to the admin interface with the Django superuser credentials and create the new user account there.
+
+## Running II-20
+After installing the 

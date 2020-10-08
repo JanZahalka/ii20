@@ -23,3 +23,14 @@ II-20 is implemented as a Django web app utilizing scientific and deep learning 
 4. Create the virtual environment: `virtualenv -p python3 env_ii20`.
 5. Activate the virtual environment: `source env_ii20/bin/activate`.
 6. Install the required Python packages: `pip install -r requirements.txt`.
+7. `cd scripts`
+8. `python generate_secret_key.py`
+9. Create the app's DB user on II-20's side: `python db_superuser.py` (and note the DB user info, further denoted by `<db_username>` and `<db_password>`).
+10. Create the MySQL database used by the system and the DB user on the DB side:
+```
+sudo mysql -u root
+CREATE DATABASE ii20;
+CREATE USER '<db_username>'@'localhost' IDENTIFIED BY '<db_password>';
+GRANT ALL PRIVILEGES ON ii20.* TO '<db_username>'@'localhost';
+exit
+```

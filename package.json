@@ -1,0 +1,35 @@
+{
+  "name": "ii20",
+  "version": "1.0.0",
+  "description": "DATABASE SETTINGS ================= sudo mysql -u root CREATE DATABASE mmtetris; CREATE USER 'pazhitnov'@'localhost' IDENTIFIED by 'managing tetris for multimedia analytics'; GRANT ALL PRIVILEGES ON mmtetris.* TO 'pazhitnov'@'localhost';",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack --mode development ./ii20/ui/src/index.js --output ./ii20/ui/static/ui/main.js",
+    "build": "webpack --mode production ./ii20/ui/src/index.js --output ./ii20/ui/static/ui/main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://jzahalka_bohemai@bitbucket.org/jzahalka_bohemai/tetris.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/jzahalka_bohemai/tetris#readme",
+  "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/preset-env": "^7.11.5",
+    "@babel/preset-react": "^7.10.4",
+    "babel-loader": "^8.1.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "core-js": "^3.2.1",
+    "install": "^0.13.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.13.1",
+    "react-addons-perf": "^15.4.2",
+    "react-dom": "^16.13.1",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12"
+  },
+  "dependencies": {}
+}

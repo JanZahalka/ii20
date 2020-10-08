@@ -1,0 +1,14 @@
+server {
+    listen 80;
+    server_name 147.32.69.18 insight.ciirc.cvut.cz;
+    client_max_body_size 4G;
+
+	location / {
+		include proxy_params;
+	  	proxy_pass http://unix:/home/mmtetris/sw/tetris/server.sock;
+	}
+
+	location /static {
+       alias /home/mmtetris/sw/tetris/tetris_app/staticfiles;
+    }
+}

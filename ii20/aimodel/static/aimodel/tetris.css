@@ -1,0 +1,656 @@
+body {
+	background-color: #181818;
+	color: #e7e7e7;
+	font-family: "IBM Plex Sans";
+}
+
+a {
+	color: #ff6600;
+}
+
+.logowrapper {
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	margin-top: 2vh;
+}
+
+.logo {
+	height: 5vh;
+}
+
+.menu {
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	margin-top: 2vh;
+}
+
+.menulink {
+	margin-left: 30px;
+}
+
+.content {
+	width: 90%;
+	margin: 3vh 5% 0 5%;
+}
+
+.error {
+	font-weight: bold;
+	color: #ff6600;
+}
+
+#uicontainer {
+	display: flex;
+	height: 80vh;
+}
+
+#ii20interface {
+	display: flex;
+	flex-direction: row-reverse;
+	border: 1px solid #e7e7e7;
+	height: 80vh;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+#workspace {
+	display: flex;
+	flex-wrap: wrap;
+	border: 1px solid #e7e7e7;	
+	width: 75%;
+	height: 80vh;
+	margin: 0;
+}
+
+#workspacesvg {
+	width: 100%;
+	height: 64vh;
+}
+
+#bucketbanner {
+	display: flex;
+	width: 100%;
+	height: 16vh;
+	background-color: red;
+}
+
+.bucketbox {
+	display: flex;
+	flex-direction: column;
+	color: #181818;
+	height: 100%;
+}
+
+.bucketboxheader {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 20%;
+	margin-bottom: 2%;
+}
+
+.bucketboxname {
+	font-weight: bold;
+	display: inline-block;
+}
+
+.bucketboximgcount {
+	display: inline-block;
+}
+
+.archetypecontainer {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	width: 100%;
+	height: 76%;
+	margin-bottom: 2%;
+	overflow-y: hidden;
+}
+
+.archetype {
+	width: auto;
+	height: 100%;
+	margin-bottom: 100%;
+
+}
+
+#sidepanel {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	border: 1px solid #e7e7e7;
+	height: 100%;
+	width: 25%;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+
+.suggbucket {
+	font-weight: bold;
+}
+
+.highlight {
+	font-weight: bold;
+	color: #0065bd;
+}
+
+.divider {
+	height: 40px;
+	width: 100%;
+}
+
+.overlay {
+	position: fixed;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.8);
+	z-index: 1;
+}
+
+.overlaycontent {
+	display: flex;
+	align-items: flex-start;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding: 10px;
+	background-color: #181818;
+	width: 70%;
+	min-height: 50vh;
+	max-height: 80vh;
+	overflow-y: hidden;
+}
+
+.buttoncontainer {
+	padding: 0;
+	margin: 0;
+	cursor: pointer;	
+}
+
+.button {
+	color: white !important;
+	text-decoration: none;
+	background: #181818;
+	display: inline-block;
+	transition: all 0.4s ease 0s;
+	margin: 0;
+}
+
+.textbutton {
+	padding: 5px 10px 5px 10px;
+	border: 2px solid white !important;
+}
+
+.longtextbutton {
+	width: 150px;
+}
+
+.button:hover, .buttontoggled {
+	color: #181818 !important;
+	text-decoration: none;
+	background: white;
+	display: inline-block;
+	border-color: white !important;
+	transition: all 0.4s ease 0s;
+	margin: 0;
+}
+
+#bucketcontrol {
+	display: flex;
+	justify-content: center;
+	align-content: space-around;
+	flex-wrap: wrap;
+	width: 100%;
+	max-height: 40%;
+	margin-top: 5px;
+}
+
+.bucketitems {
+	display: flex;
+	flex-wrap: wrap;
+	max-height: 85%;
+	overflow-y: scroll;
+	margin-bottom: 20px;
+}
+
+.bucketcontrolitemouter {
+	display: flex;
+	width: 100%;
+}
+
+.bucketcontrolitem {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	width: 100%;
+	padding: 10px 20px 10px 20px;
+	margin: 5px 0 5px 0;
+}
+
+.bucketicon {
+	width: 30px;
+	height: 30px;
+	cursor: pointer;
+}
+
+.bucketlabel {
+	width: 40%;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.bucketcontrols {
+	display: flex;
+	width: 105px;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.iconbutton {
+	width: 30px;
+}
+
+.arrows {
+	display: flex;
+	flex-direction: column;
+	width: 30px;
+	margin: 0;
+	padding: 0;
+}
+
+.viewiconbutton {
+	background-image: url("/static/ui/view.png");
+	background-size: cover;
+	height: 30px;
+}
+
+.viewiconbutton:hover {
+	background-image: url("/static/ui/view_hover.png");
+}
+
+.editiconbutton {
+	background-image: url("/static/ui/edit.png");
+	background-size: cover;
+	height: 30px;
+}
+
+.editiconbutton:hover {
+	background-image: url("/static/ui/edit_hover.png");
+}
+
+.deleteiconbutton {
+	background-image: url("/static/ui/delete.png");
+	background-size: cover;
+	height: 30px;
+}
+
+.deleteiconbutton:hover {
+	background-image: url("/static/ui/delete_hover.png");
+}
+
+.uparrowiconbutton {
+	background-image: url("/static/ui/up.png");
+	background-size: cover;
+	height: 15px;
+}
+
+.questionnaireanswer {
+	width: 50%;
+	height: 24vh;
+}
+
+.uparrowiconbutton:hover {
+	background-image: url("/static/ui/up_hover.png");
+}
+
+.downarrowiconbutton {
+	background-image: url("/static/ui/down.png");
+	background-size: cover;
+	height: 15px;
+}
+
+.downarrowiconbutton:hover {
+	background-image: url("/static/ui/down_hover.png");
+}
+
+#modecontrols {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+	width: 100%;
+}
+
+.toggle {
+	display: flex;
+	justify-content: space-around;
+	width: 100%;
+}
+
+.toggleoption {
+	display: flex;
+	justify-content: space-around;
+}
+
+.toggleelement {
+	margin-right: 20px;
+}
+
+.togglelabel {
+	display: inline-block;
+	width: 150px;
+}
+
+.modesettings {
+	display: flex;
+	justify-content: space-around;
+	width: 100%;
+}
+
+.gridsettings {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	width: 100%;
+}
+
+.gridslider {
+	display: flex;
+	justify-content: space-between;
+	padding: 0 15% 0 15%;
+}
+
+.gridbuttons {
+	display: flex;
+	justify-content: space-around;
+}
+
+.pauseplay {
+	display: flex;
+}
+
+.speedcontrols {
+	display: flex;
+	align-items: center;
+}
+
+#strategycontrols {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+	width: 100%;
+}
+
+#miscbuttons {
+	text-align: center;
+	margin-bottom: 50px;
+}
+
+.overlayheader {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	padding: 0 5% 0 5%;
+}
+
+.bucketviewcontrols {
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+	padding: 0 5% 0 5%;
+	width: 100%;
+}
+
+.bvviewtoggles {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.bvcontrolitem {
+	margin-right: 20px;
+}
+
+.bvviewtoggleicon {
+	width: 36px;
+	height: 36px;
+	background-size: auto 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.bvorderingouter {
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+}
+
+.bvorderingoption {
+	text-align: left;
+}
+
+.bvorderingdropdown {
+  background-color: #444444;
+  color: white;
+  padding: 16px;
+  width: 150px;
+  text-align: left;
+  border: none;
+  font-family: "IBM Plex Sans";
+  font-size: 100%;
+}
+
+.bvorderingwrapper {
+  display: inline-block;
+}
+
+.bvorderingdropcontent {
+  display: none;
+  position: absolute;
+  background-color: #181818;
+  min-width: 150px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.bvorderingdropcontent div {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
+}
+
+.bvorderingdropcontent div:hover {background-color: #ddd;}
+
+.bvorderingwrapper:hover .bvorderingdropcontent {display: block;}
+
+.bvorderingwrapper:hover .bvorderingdropdown {background-color: #ff6600;}
+
+
+.bvtransfercontrols {
+	display: flex;
+	align-items: baseline;
+}
+
+.bvtransfermode {
+	margin: 20px 0 20px 0;
+}
+
+
+.bvgrid {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	height: 60vh;
+	overflow-y: scroll;
+}
+
+.bvgriditem {
+	margin: 1%;
+	width: 30%;
+	height: 400px;
+	background-size: auto 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	border-style: solid;
+	border-width: 6px;
+}
+
+.bvcolitem {
+	width: 90%;
+	height: 60vh;
+	margin: 3vh 3% 3vh 3%;
+	background-size: auto 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	border-style: solid;
+	border-width: 6px;
+}
+
+.grid {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 64vh;
+	margin: 0;
+	padding: 0;
+}
+
+.gridimg {
+	margin: 5px;
+	padding: 0;
+	background-size: auto 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.ffentry {
+	display: flex;
+	justify-content: space-around;
+	align-items: baseline;
+	margin-bottom: 20px;
+}
+
+.fflabel {
+	display: block;
+	width: 250px;
+	text-align: right;
+	margin-right: 20px;
+}
+
+.imgdecorator {
+	margin: 5%;
+	max-width: 8%;
+}
+
+#ffnoimages {
+	width: 225px;
+}
+
+.tooltip {
+  visibility: hidden;
+  width: 250px;
+  background-color: #444444;
+  color: white;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -125px;
+  opacity: 0;
+  cursor: auto;
+  z-index: 1;
+}
+
+.tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #444444 transparent transparent transparent;
+}
+
+.tooltipcontainer {
+	position: relative;
+  	display: inline-block;
+}
+
+.tooltipcontainer:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+  transition: 2s all;
+  transition-timing-function: step-end;
+}
+
+.tooltipbelow {
+	top: 125%;
+	bottom: auto;
+}
+
+.tooltipbelow::after {
+	top: -10px;
+	border-color: transparent transparent #444444 transparent;
+}
+
+.tooltiprightedgealigned {
+  	right: 0%;
+  	left: auto;
+}
+
+.tooltiprightedgealigned::after {
+	right: 5%;
+	left: auto;
+}
+
+.tooltipleftedgealigned {
+  	left: 100%;
+  	right: auto;
+}
+
+.tooltipleftedgealigned::after {
+	left: 5%;
+	right: auto;
+}
+
+.imagepreview {
+	width: 95%;
+	height: 64vh;
+	border-width: 6px;
+	border-style: solid;
+	background-size: auto 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+#insight {
+	width: 95%;
+	height: 20vh;
+	margin-bottom: 20px;
+}
+
+#tetrismetadataoverlay {
+	width: 100%;
+	height: 64vh;
+	text-align: center;
+	background-color: rgba(0, 0, 0, 0.8);
+}

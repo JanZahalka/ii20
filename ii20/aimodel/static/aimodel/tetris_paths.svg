@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="63.067402mm"
+   height="20.037777mm"
+   viewBox="0 0 63.067402 20.037777"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
+   sodipodi:docname="tetris_paths.svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35"
+     inkscape:cx="391.46664"
+     inkscape:cy="-204.11431"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="2490"
+     inkscape:window-height="1376"
+     inkscape:window-x="70"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Vrstva 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(137.5934,-105.02841)">
+    <g
+       aria-label="II-20"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       id="text817">
+      <path
+         d="m -137.5934,124.64285 h 5.53155 v -19.19111 h -5.53155 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:28.22222137px;font-family:'Technika Stencil';-inkscape-font-specification:'Technika Stencil, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#0065bd;fill-opacity:1;stroke-width:0.26458332"
+         id="path924" />
+      <path
+         d="m -127.56129,124.64285 h 5.53156 v -19.19111 h -5.53156 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:28.22222137px;font-family:'Technika Stencil';-inkscape-font-specification:'Technika Stencil, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#0065bd;fill-opacity:1;stroke-width:0.26458332"
+         id="path926" />
+      <path
+         d="m -118.37583,113.38219 v 3.18911 h 8.04333 v -3.18911 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:28.22222137px;font-family:'Technika Stencil';-inkscape-font-specification:'Technika Stencil, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#0065bd;fill-opacity:1;stroke-width:0.26458332"
+         id="path928" />
+      <path
+         d="m -108.08134,110.87041 c 0.87489,-0.62089 2.56822,-1.21356 4.43089,-1.21356 h 0.31044 v -4.54377 c -1.86266,0.0564 -3.52777,0.36688 -4.74133,0.81844 z m 0.87489,7.98689 h 7.16844 c 3.781782,-2.34245 5.729115,-4.76956 5.729115,-7.39422 0,-3.52778 -2.455333,-6.18067 -7.535335,-6.32178 v 4.71311 c 1.18534,0.39511 1.890891,1.12889 1.890891,2.34244 0,1.46756 -1.213551,2.45534 -2.991551,3.72534 -2.14489,1.55222 -3.16089,2.20133 -4.26156,2.93511 z m -1.10067,5.78555 h 13.913559 v -4.34622 h -13.913559 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:28.22222137px;font-family:'Technika Stencil';-inkscape-font-specification:'Technika Stencil, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#0065bd;fill-opacity:1;stroke-width:0.26458332"
+         id="path930" />
+      <path
+         d="m -84.431999,125.06619 v -4.54378 c -1.411111,-0.36689 -2.398889,-1.83445 -2.398889,-5.47511 0,-3.64067 0.987778,-5.10822 2.398889,-5.47511 v -4.54378 c -5.051778,0.31044 -8.325556,3.66889 -8.325556,10.01889 0,6.35 3.273778,9.70844 8.325556,10.01889 z m 1.552222,0 c 5.08,-0.28223 8.353777,-3.64067 8.353777,-10.01889 0,-6.37822 -3.273777,-9.73667 -8.353777,-10.01889 v 4.54378 c 1.411111,0.33866 2.427111,1.80622 2.427111,5.47511 0,3.66889 -1.016,5.13644 -2.427111,5.47511 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:28.22222137px;font-family:'Technika Stencil';-inkscape-font-specification:'Technika Stencil, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#0065bd;fill-opacity:1;stroke-width:0.26458332"
+         id="path932" />
+    </g>
+  </g>
+</svg>

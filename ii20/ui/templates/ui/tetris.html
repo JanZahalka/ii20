@@ -1,0 +1,26 @@
+{% extends "aimodel/base.html" %}
+{% load static %}
+
+
+{% block external_js %}
+	<script src="{% static "ui/overlay.js" %}"></script>
+{% endblock %}
+
+{% block inline_js %}
+<script>
+	var initBuckets = {{ init_buckets|safe }};
+	var initBucketOrdering = {{ init_bucket_ordering|safe }};
+	var csrfToken = "{{ csrf_token }}";
+</script>
+{% endblock %}
+
+
+{% block content %}
+<div class="content">
+	<div id="uicontainer">
+	</div>
+</div>
+
+<script src="{% static "ui/main.js" %}"></script>
+
+{% endblock %}

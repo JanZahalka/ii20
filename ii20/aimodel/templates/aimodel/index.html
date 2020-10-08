@@ -1,0 +1,31 @@
+{% extends "aimodel/base.html" %}
+
+{% block content %}
+
+<div class="content">
+	<h1>Log in</h1>
+
+	<form action="/login" method="post">
+	{% csrf_token %}
+	<table>
+		<tr>
+			<td class="forminput">Username:</td>
+			<td><input type="text" name="username"></td>
+		</tr>
+		<tr>
+			<td class="forminput">Password:</td>
+			<td><input type="password" name="password"></td>
+		</tr>
+	</table>
+	<br>
+	<input type="submit" value="Log in">
+	
+	</form>
+	
+	{% if err_msg %}
+	<br>
+	<span class="error">Login unsuccessful: {{ err_msg }}</span>
+	{% endif %}
+</div>
+
+{% endblock %}

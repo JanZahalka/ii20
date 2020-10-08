@@ -1,0 +1,9 @@
+/var/log/mmtetris/django/*.log {
+	weekly
+  	rotate 52
+  	compress
+  	dateext
+  	dateyesterday
+  	missingok
+  	su mmtetris www-data
+}

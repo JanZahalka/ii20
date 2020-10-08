@@ -1,0 +1,85 @@
+REQUIREMENTS
+============
+- if mysqlclient throws "OSError: mysql_config not found", run "sudo apt-get install libmysqlclient-dev"
+
+
+DATABASE SETTINGS
+=================
+sudo mysql -u root
+CREATE DATABASE ii20;
+CREATE USER 'pazhitnov'@'localhost' IDENTIFIED by 'managing ii20 multimedia analytics';
+GRANT ALL PRIVILEGES ON ii20.* TO 'pazhitnov'@'localhost';
+- Run the db_superuser script (once) to set up your database superuser on Django's side.
+
+
+SECRET KEY
+==========
+- For security reasons, not included with the repo.
+- Run the generate_secret_key.py script (just once!) to set up your secret key
+
+
+DATA
+====
+mkdir tetris/tetris_app/data
+mkdir tetris/tetris_app/staticfiles/tetris/data
+> Symbolic link your dataset(s) in BOTH those directories
+
+USERS
+=====
+python manage.py migrate
+python manage.py createsuperuser
+> Username: pazhitnov
+> Email address: <your address>
+> Password: managing tetris for multimedia analytics
+
+UBUNTU PACKAGES
+===============
+sudo apt install virtualenv mysql-server libmysqlclient-dev default-libmysqlclient-dev python3-dev nginx supervisor
+
+VIRTUAL ENVIRONMENT
+===================
+virtualenv -p python3 env_tetris
+
+SERVER
+======
+147.32.69.18
+
+FIREWALL - PORTS
+================
+sudo ufw allow ssh
+sudo ufw enable
+sudo ufw allow http
+sudo ufw allow https
+sudo ufw allow 8000/tcp
+
+USER
+====
+sudo useradd -m -s /bin/bash mmtetris
+sudo passwd mmtetris
+<enter the password: "user making mm tetris happen">
+
+GUNICORN CONFIG
+===============
+sudo mkdir /var/log/mmtetris
+sudo chown mmtetris /var/log/mmtetris
+
+SYSTEMD CONFIG
+==============
+sudo cp /home/mmtetris/sw/tetris/tetris_app/config/systemd/tetris.service /etc/systemd/system
+sudo systemctl start tetris
+sudo systemctl enable tetris
+
+NGINX
+=====
+sudo ln -s /home/mmtetris/sw/tetris/tetris_app/config/nginx/tetris /etc/nginx/sites-enabled
+
+LOGGING
+=======
+Ensure you have logrotate (default on Ubuntu), if not, install it.
+sudo cp /home/mmtetris/sw/tetris/tetris_app/config/logrotate/mmtetris /etc/logrotate.d
+
+NPM
+===
+npm i webpack webpack-cli --save-dev
+npm i @babel/core babel-loader @babel/preset-env @babel/preset-react --save-dev
+npm i react react-dom --save-dev

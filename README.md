@@ -34,3 +34,7 @@ CREATE USER '<db_username>'@'localhost' IDENTIFIED BY '<db_password>';
 GRANT ALL PRIVILEGES ON ii20.* TO '<db_username>'@'localhost';
 exit
 ```
+11. `cd ../ii20`
+12. `python manage.py migrate`
+13. Create the Django superuser: `python manage.py createsuperuser`, note the username (further: `<django_admin_username>`) and password (further: `<django_admin_password>`).
+14. Link the demo dataset: open 

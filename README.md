@@ -43,7 +43,7 @@ exit
 14. (Optional, but recommended) Set a user account other than the Django superuser to log in to II-20 (if skipped, you can log in with the Django superuser credentials). First, `cd $II20_ROOT/ii20`. Then, run the server: `python manage.py runserver`. Open up your web browser, go to `localhost:8000/admin`, log in to the admin interface with the Django superuser credentials and create the new user account there.
 
 ## Running II-20
-After installing II-20, you run the server using those commands:
+After installing II-20, you run the server using those commands (don't forget to activate your virtual environment first):
 ```
 cd $II20_ROOT/ii20
 python manage.py runserver

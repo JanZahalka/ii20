@@ -4,6 +4,8 @@ II-20 is a multimedia analytics system for intelligent analytic categorization o
 
 There are two modes in which you can conduct your analytics - a classic grid interface, and a playful "Tetris" interface where images flow from the top to the buckets on the bottom (useful if you want to focus on individual images, or just want a change of pace). The process is fully interactive, and the system is responsive even on large data (hundreds of thousands to millions of images in one dataset).
 
+**Feedback welcome**. If you use II-20 and have any comments or suggestions on your mind (especially if you used II-20 on your own data - see how below), please do not hesitate to send them to me at jan@zahalka.net.
+
 ### Videos:
 [Demo video (YouTube)](https://www.youtube.com/watch?v=M2vJQCY_omU)
 

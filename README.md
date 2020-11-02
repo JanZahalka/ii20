@@ -2,7 +2,9 @@
 ## About II-20
 II-20 is a multimedia analytics system for intelligent analytic categorization of image collections. II-20 loads in your dataset, and allows you to define your categories of relevance - called buckets - to which you add images that you deem relevant. II-20's intelligent AI model learns to understand the buckets, providing you with instant suggestions of relevant items. You can add/delete/redefine/update buckets at any time, making II-20's analytics truly flexible.
 
-There are two modes in which you can conduct your analytics - a classic grid interface, and a playful "Tetris" interface where images flow from the top to the buckets on the bottom (useful if you want to focus on individual images, or just want a change of pace). The process is fully interactive, and the system is responsive even on large data (hundreds of thousands of images to millions).
+There are two modes in which you can conduct your analytics - a classic grid interface, and a playful "Tetris" interface where images flow from the top to the buckets on the bottom (useful if you want to focus on individual images, or just want a change of pace). The process is fully interactive, and the system is responsive even on large data (hundreds of thousands to millions of images in one dataset).
+
+**Feedback welcome**. If you use II-20 and have any comments or suggestions on your mind (especially if you used II-20 on your own data - see how below), please do not hesitate to send them to me at jan@zahalka.net.
 
 ### Videos:
 [Demo video (YouTube)](https://www.youtube.com/watch?v=M2vJQCY_omU)
@@ -43,7 +45,7 @@ exit
 14. (Optional, but recommended) Set a user account other than the Django superuser to log in to II-20 (if skipped, you can log in with the Django superuser credentials). First, `cd $II20_ROOT/ii20`. Then, run the server: `python manage.py runserver`. Open up your web browser, go to `localhost:8000/admin`, log in to the admin interface with the Django superuser credentials and create the new user account there.
 
 ## Running II-20
-After installing II-20, you run the server using those commands:
+After installing II-20, you run the server using those commands (don't forget to activate your virtual environment first):
 ```
 cd $II20_ROOT/ii20
 python manage.py runserver

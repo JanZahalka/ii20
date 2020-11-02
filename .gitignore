@@ -241,3 +241,5 @@ secrets/
 
 # React and webpack stuff
 node_modules/
+
+doc/

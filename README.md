@@ -12,7 +12,7 @@ There are two modes in which you can conduct your analytics - a classic grid int
 ## Paper
 If you are using II-20 or its parts in your scientific work, please cite the II-20 paper:
 
-*J. Zahálka, M. Worring, and Jarke J. van Wijk. **II-20: Intelligent and pragmatic analytic categorization of image collections**. To appear in IEEE Transactions on Visualization and Computer Graphics, February 2021.*
+*J. Zahálka, M. Worring, and Jarke J. van Wijk. **II-20: Intelligent and pragmatic analytic categorization of image collections**. IEEE Transactions on Visualization and Computer Graphics, 27 (2), pp. 422 - 431, February 2021.*
 
 (https://arxiv.org/abs/2005.02149)
 
